@@ -99,12 +99,12 @@ async function scrapeWithAxios() {
       
       const response = await axios.get(approach.url, { 
         headers: approach.headers,
-        timeout: 30000
-      });
+      timeout: 30000
+    });
       
       console.log(`${approach.name} - Page fetched successfully, length:`, response.data.length);
-      
-      const $ = cheerio.load(response.data);
+    
+    const $ = cheerio.load(response.data);
       const pageTitle = $('title').text();
       console.log(`${approach.name} - Page title:`, pageTitle);
       
@@ -191,8 +191,8 @@ async function scrapeWithAxios() {
           return createResultObject(approach.url, response.data, $, tickData);
         }
       }
-      
-    } catch (error) {
+    
+  } catch (error) {
       console.log(`${approach.name} - Failed:`, error.message);
     }
   }
@@ -346,7 +346,7 @@ async function extractTickData($, approachName) {
             notes: tick.notes || tick.comment || ''
           }));
           console.log(`${approachName} - Successfully extracted ${tickData.length} ticks from API array`);
-          break;
+            break;
         } else if (typeof tickResponse.data === 'string' && tickResponse.data.includes('tick')) {
           // Handle case where response is HTML with tick data
           console.log(`${approachName} - API returned HTML, checking for tick data...`);
@@ -459,9 +459,9 @@ async function extractTickData($, approachName) {
         if (userLink.length > 0) {
           const user = userLink.text().trim();
           console.log(`${approachName} - Found recent climb mention: ${user} - ${text.substring(0, 50)}`);
-        }
-      }
-    });
+              }
+            }
+          });
   }
   
   // Method 6: Try alternative public URLs for tick data
