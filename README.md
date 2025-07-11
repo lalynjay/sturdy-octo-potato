@@ -7,7 +7,6 @@ A web application that tracks and compares climbing activity from Mountain Proje
 - **User Tick Tracking**: Downloads and stores user climbing tick data from Mountain Project
 - **Recent Activity Comparison**: Compare climbing activity from the last 30 days between users
 - **Hardest Climbs Analysis**: Find who climbed the hardest routes in the last 30 days
-- **Real-time Updates**: WebSocket-based real-time notifications
 - **CSV Export**: Downloads user tick data directly from Mountain Project
 - **Tie Handling**: Properly handles ties in rankings
 - **Loading States**: Visual feedback during data operations
