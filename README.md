@@ -60,9 +60,8 @@ The application will be available at `http://localhost:3002` (or automatically f
 - Disqualifies users with no recent activity (shows them separately)
 
 ### Hardest Climbs Analysis
-- Analyzes route difficulty ratings (5.12a, 5.13b, etc.)
-- Handles compound grades (5.13a/b) by taking the harder grade
-- Converts ratings to numeric scores for comparison
+- Analyzes route difficulty ratings (5.12a, 5.13a/b, 5.13b, etc.)
+- Converts bouldering grades, with a penalty (V12 ~= 5.13a)
 - Shows the hardest route per user in the last 30 days
 - Displays route name, grade, and date
 - Disqualifies users with no recent activity
